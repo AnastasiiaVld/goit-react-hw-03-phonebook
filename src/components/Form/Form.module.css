@@ -1,0 +1,39 @@
+.p {
+ color: blue;
+}
+
+.button{
+     margin-left: 20px;
+    border-radius: 999px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 5px 15px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
+        color: gray;
+        width: 130px;
+        height: 40px;
+
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.input {
+box-shadow: 10px 5px 5px blue;
+width: 250px;
+height: 30px;
+}
+
+ 

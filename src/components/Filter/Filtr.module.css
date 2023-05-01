@@ -1,0 +1,12 @@
+.label {
+    color: blue;
+   display: flex;
+   gap: 20px;
+
+}
+
+.input {
+    box-shadow: 10px 5px 5px blue;
+    width: 200px;
+    height: 25px;
+}
