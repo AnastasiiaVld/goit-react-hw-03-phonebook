@@ -20,8 +20,8 @@ export class App extends Component {
     this.setState(({contacts}) => ({contacts:[...contacts, contact]}))
   }
 
-  addFilterName = (value) => {
-    this.setState({filter:value})
+  addFilterName = (e) => {
+    this.setState({filter:e.currentTarget.value})
   }
 
   isNameDudlicated = name => 
@@ -30,17 +30,20 @@ export class App extends Component {
   deleteContacts = (e) => {
     this.setState({contacts: this.state.contacts.filter(el => el.id !== e.target.id )})
   }
-  
+
+
+  filterContact = () => {
+    return this.state.contacts.filter(contact => contact.name.toLocaleLowerCase().includes(this.state.filter.toLocaleLowerCase()))
+} 
   
   render() {
-    const filterContact = this.state.contacts.filter(contact => contact.name.toLocaleLowerCase().includes(this.state.filter.toLocaleLowerCase()))
   return (
     <>
       <h1>Phonebook</h1>
       <Form addContact={this.addContact} isNameDudlicated={this.isNameDudlicated} />
       <h2>Contacs</h2>
       <Filtr addFilterName={this.addFilterName} />
-      <ContactsList contacts={filterContact} deleteContacts={this.deleteContacts}/>
+      <ContactsList contacts={this.filterContact()} deleteContacts={this.deleteContacts}/>
     </>
   )
   }

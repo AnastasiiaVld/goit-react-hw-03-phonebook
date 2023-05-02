@@ -4,7 +4,7 @@ import s from './Filtr.module.css'
 export const Filtr = ({ addFilterName }) => {
     return (
         <label className={s.label}> Find contacts by name:   
-            <input className={s.input} type="text" onChange={e => addFilterName(e.currentTarget.value)}/>
+            <input className={s.input} type="text" onChange={addFilterName}/>
         </label>
     )
 }
